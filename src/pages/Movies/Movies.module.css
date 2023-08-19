@@ -1,0 +1,54 @@
+
+.Movies__cardContainer {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 12px;
+  margin: 0;
+  padding-top: 60px;
+  box-sizing: border-box;
+}
+
+.Movies__loadMoreContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+
+/* For responsiveness */
+@media (max-width: 512px) {
+  .Movies__cardContainer {
+    justify-content: center; /* Center the cards on small screens */
+  }
+}
+
+.Movies__errorMessage {
+  margin: 0 auto;
+  color: red;
+  font-size: 16px;
+}
+
+.Movies__button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 8px auto;
+}
+
+.Movies__button:hover {
+  background-color: #0056b3;
+}
+
+.Movies__button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.Movies__loadMoreContainer span {
+  margin: 8px auto;
+}

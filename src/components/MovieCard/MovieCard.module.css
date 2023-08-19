@@ -1,0 +1,84 @@
+
+.MovieCard__card {
+  max-width: 220px;
+  min-width: 220px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  height: 270px;
+  cursor: pointer;
+}
+
+@media (max-width: 512px) {
+  .MovieCard__card {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
+
+.MovieCard__imageContainer {
+  height: 75%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  overflow: hidden;
+}
+
+.MovieCard__cardImage {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  transition: all 0.1s ease-in-out;
+}
+
+.MovieCard__card:hover .MovieCard__cardImage {
+  transform: scale(1.2);
+}
+
+.MovieCard__cardContent {
+  height: 25%;
+  padding: 6px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 2px;
+}
+
+.MovieCard__cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.MovieCard__cardTitle {
+  font-weight: 600;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  width: 80%;
+}
+
+.MovieCard__rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.MovieCard__starIcon {
+  width: 16px;
+  height: 16px;
+  fill: #f59e0b;
+}
+
+.MovieCard__cardDescription {
+  font-size: 14px;
+  width: 100%;
+  color: #6b7280;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
