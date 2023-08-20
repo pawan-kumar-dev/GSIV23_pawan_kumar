@@ -17,4 +17,16 @@ const getCast = (casts = []) => {
 
 const getReleaseYear = (releaseDate) => new Date(releaseDate).getFullYear();
 
-export { getDirector, getCast, getReleaseYear };
+
+const convertToHHMM = (minutes) => {
+  const hours = Math.floor(minutes / 60);
+  const remainingMinutes = minutes % 60;
+
+  const formattedHours = hours < 10 ? `0${hours}` : hours;
+  const formattedMinutes =
+    remainingMinutes < 10 ? `0${remainingMinutes}` : remainingMinutes;
+
+  return `${formattedHours}:${formattedMinutes}`;
+};
+
+export { getDirector, getCast, getReleaseYear, convertToHHMM };

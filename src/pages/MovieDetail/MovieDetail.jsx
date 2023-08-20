@@ -10,14 +10,17 @@ import api from "../../api";
 import { Header, Loader } from "../../components";
 import { get } from "../../utils/lodash"; // Import lodash get
 import styles from "./MovieDetail.module.css";
-import { getCast, getDirector, getReleaseYear } from "../../utils/functions";
+import {
+  convertToHHMM,
+  getCast,
+  getDirector,
+  getReleaseYear,
+} from "../../utils/functions";
 
 const MovieDetail = () => {
   const { id: movieId } = useParams();
   const dispatch = useDispatch();
-  const { movieDetail, isFetchingMovieDetail } = useSelector(
-    (state) => state
-  );
+  const { movieDetail, isFetchingMovieDetail } = useSelector((state) => state);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -82,8 +85,8 @@ const MovieDetail = () => {
               </span>
             </div>
             <div className={styles.MovieDetail__basicDetails}>
-              <span>{getReleaseYear(get(movieDetail, 'release_date'))}</span>
-              <span>{get(movieDetail, "runtime")} Minutes</span>
+              <span>{getReleaseYear(get(movieDetail, "release_date"))}</span>
+              <span>{convertToHHMM(get(movieDetail, "runtime"))}</span>
               <span>{getDirector(get(movieDetail, "crew"))}</span>
             </div>
             <p className={styles.MovieDetail__castStyle}>

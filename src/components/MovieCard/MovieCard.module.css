@@ -8,7 +8,7 @@
   margin: 8px;
   display: flex;
   flex-direction: column;
-  height: 270px;
+  height: 280px;
   cursor: pointer;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .MovieCard__imageContainer {
-  height: 75%;
+  height: 80%;
   border-top-left-radius: 8px;
   border-top-right-radius: 8px;
   overflow: hidden;
@@ -38,7 +38,7 @@
 }
 
 .MovieCard__cardContent {
-  height: 25%;
+  height: 20%;
   padding: 6px;
   display: flex;
   flex-direction: column;
@@ -49,6 +49,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 4px;
 }
 
 .MovieCard__cardTitle {
